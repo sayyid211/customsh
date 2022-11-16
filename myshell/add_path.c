@@ -17,7 +17,7 @@ void add_path(char **cmd, char **env, int *status)
 
 	char *_cwd = getcwd(NULL, 0);
 
-	path = pathfinder(env);
+	path = find_path(env);
 	ppath = tokstr(path, 1);
 
 	(*status) = 0;

@@ -9,7 +9,8 @@
  * Return: Success
  */
 
-int main(int argc, char **argv, __attribute__((unused)) char **env)
+int main( __attribute__((unused))int argc, __attribute__((unused)) char **argv,
+	  __attribute__((unused)) char **env)
 {
 	char **token; /* individual tokens or commands */
 	char *line = NULL; /* input string */

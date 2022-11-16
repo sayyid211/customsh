@@ -14,22 +14,25 @@ char **tokstr(char *str, int type)
 	char *s = NULL, *token = NULL, **tk = NULL;
 	if (type == 1)
 		s = _strdup(str);
-	else if (type == 0)
+	if (type == 0)
 		s = _strduppop(str);
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i} == ' ' && type == 0)
+		if (s[i] == ' ' && type == 0)
 			length++;
 		else if (str[i] == ':' && type == 1)
 			length++;
 	}
+
 	if (type == 1)
 		strtok(s, "=");
 	tk = malloc(sizeof(char *) * length);
+
 	if (type == 0)
 		token = strtok(s, " \t\r\n\v\f\0 ");
-	else if (type == 1)
+	if (type == 1)
 		token = strtok(NULL, ":");
+
 	while (token)
 	{
 		tk[count] = _strdup(token);
